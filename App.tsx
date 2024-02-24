@@ -1,6 +1,5 @@
-import { SafeAreaView, BackHandler, StyleSheet,StatusBar } from "react-native";
+import { SafeAreaView, BackHandler, StyleSheet, StatusBar, View } from "react-native";
 import { WebView } from "react-native-webview";
-// import { StatusBar } from 'expo-status-bar';
 
 import { useRef, useEffect } from "react";
 
@@ -27,7 +26,7 @@ const WebViewWrapper = (): JSX.Element => {
     <WebView
       bounces={false}
       source={{
-        uri: "https://develop.d4zinqpf8hiuq.amplifyapp.com/",
+        uri: "https://www.joomoonmoa.com/",
       }}
       ref={webview}
       injectedJavaScript={INJECTED_JAVASCRIPT}
@@ -37,16 +36,28 @@ const WebViewWrapper = (): JSX.Element => {
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.safeArea}>
-      <StatusBar barStyle={"dark-content"} />
-      <WebViewWrapper />
-    </SafeAreaView>
+    <>
+      <SafeAreaView style={styles.safeAreaTop}/>
+      <View style={styles.container}>
+        <StatusBar backgroundColor="#26a69a" />
+        <WebViewWrapper />
+      </View>
+      {/* <SafeAreaView /> */}
+    </>
+
   );
 }
 
 const styles = StyleSheet.create({
-  safeArea: {
-    flex: 1,
+  safeAreaTop: {
+    // flex: 1,
     backgroundColor: "#f1f3f5"
   },
+  safeAreaBottom: {
+    // flex: 1,
+    backgroundColor: "#fff"
+  },
+  container: {
+    flex: 1,
+  }
 });
