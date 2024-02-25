@@ -10,8 +10,12 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
+    "@firebase/app": "^0.9.27",
     "expo": "~49.0.15",
     "expo-cli": "^6.3.10",
+    "expo-firebase-core": "^6.0.0",
+    "expo-notifications": "~0.20.1",
+    "firebase": "^10.8.0",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "0.72.6",
